@@ -1,0 +1,69 @@
+<app-nav-aplicacao></app-nav-aplicacao>
+<div class="container">
+  <div class="row">
+    
+    <section class="col s12 l6">
+        <div class="col s12 l12"> 
+       <ul id="dropdown2" class="dropdown-content">
+      
+        <li *ngFor="let item of listPairName" class="center-align"><a href="javascript:void(0)" [title]="item" (click)="onGet(item)">{{ item }}</a></li>
+        </ul>
+      <a class="btn dropdown-trigger" href="javascript:void(0)" data-target="dropdown2" (click)="onListPair()">Selecione a Criptomoeda<i class="material-icons right">arrow_drop_down</i></a>
+      </div>      
+      <div class="input-field col s12 l12">
+    
+          <input #inputBuy id="inputBuy" value="" type="number" step="0.01" min="0.01" class="validate" (keyup.enter)="onAddListWacthing({type: 'buy', pair: getData.pairWork, price: getData.bid, input: inputBuy.value})">
+          <label for="inputBuy">% Comprar</label>
+          <a class="waves-effect waves-light btn" (click)="onAddListWacthing({type: 'buy', pair: getData.pairWork, price: getData.bid, input: inputBuy.value})"><i class="material-icons left">attach_money</i>Comprar</a>
+        </div>
+        
+        <div class="input-field col s12 l12">
+          <input #inputSell id="inputSell" value="" type="number" step="0.01" min="0.01" class="validate" (keyup.enter)="onAddListWacthing({type: 'sell', pair: getData.pairWork, price: getData.bid, input: inputBuy.value})">
+          <label for="inputSell">% Vender</label>
+          <a class="waves-effect waves-light btn" (click)="onAddListWacthing({type: 'sell', pair: getData.pairWork, price: getData.low, input: inputSell.value})"><i class="material-icons left">attach_money</i>Vender</a>
+        </div>
+      </section>
+    
+     <section class="col s12 l6">
+       
+        <h3> {{ getData.pairWork }}</h3>
+  
+          <div class="collection">
+            <a href="javascript:void(0);" class="collection-item"><span class="badge">{{ getData.bid }}</span>Compra</a>
+            <a href="javascript:void(0);" class="collection-item"><span class="badge">{{ getData.low }}</span>Venda</a>
+   
+          </div>
+      </section>
+       
+   
+   </div> 
+    <div class="row">
+      <h4>{{ listWatching.length > 0 ? "Acompanhando: "+listWatching.length : '' }}</h4>
+      <table class="table" [style.visibility]="listWatching.length > 0 ? 'visible' :'hidden'">
+        <thead>
+          <tr>
+              <th>Criptomoeda</th>
+              <th>Tipo</th>
+              <th>Preço Selecionado</th>
+              <th>Preço Desejado</th>
+              <th>Preço Atual</th>
+              <th>Ação</th>
+          </tr>
+        </thead>
+
+        <tbody>
+           <tr *ngFor="let cripto of listWatching" [class.green.accent-3]="onSendMsg(cripto)">
+            <td>{{ cripto.pair }}</td>
+            <td>{{ cripto.type }}</td>
+            <td>{{ cripto.price.toFixed(8) }}</td>
+            <td>{{ cripto.wish.toFixed(8) }}</td>
+            <td>{{ cripto.now }}</td>
+            <td><a href="javascript:void(0)" class="red darken-1 btn" (click)="onRemove(listWatching.indexOf(cripto))"><i class="material-icons left">delete_forever</i>Excluir</a></td>
+          </tr>
+        </tbody>
+      </table>
+            
+    </div>
+</div>
+
+
