@@ -44,8 +44,7 @@ $(window).scroll(function(){
 	//localização da id referente ao valor href no tempo de 1 segundo.
 	//Autor: Lucas Santos
 	//Entrada: Valor do atributo 'href'
-	//Saida: Execução da animação de rolagem automatica da página
-	
+	//Saida: Execução da animação de rolagem automatica da página	
 	$("nav a").click(function(e){
 		
 		$("nav a").removeClass("active");
@@ -58,8 +57,10 @@ $(window).scroll(function(){
 		
 	});
 	
-	
-	
+	//Descrição: Esta função serve apenas para não redirecionar a página a lugar nenhum quando a classe '.inic' for criada
+	//Autor:Lucas Santos
+	//Entrada: Nenhum dado
+	//Saida: Não redirecionar
 	$(".inic").click(function(){
 		window.location.href = "";
 	});
