@@ -19,10 +19,16 @@ export class PoloniexService {
   }
  
  
- // Retorna a requisição http do tipo get.
- // Essa função retorna dados da URL passada como parametro
+ //Descrição: Retorna a requisição http do tipo get
+ //Autor: Lucas Santos
+ //Entrada: Nenhum dado
+ //Saida: Retorna a requisição http do tipo get
   getResultado() {
     
+   //Descrição: Essa função retorna dados da URL passada como parametro
+   //Autor: Lucas Santos
+   //Entrada: Nenhum dado
+   //Saida: Retorna um JSON da requisição Ajax 
    return this.http.get(POLONIEX_URL);
   
     
