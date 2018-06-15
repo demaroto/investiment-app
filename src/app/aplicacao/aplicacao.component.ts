@@ -89,6 +89,10 @@ export class AplicacaoComponent implements OnInit {
     }
   }
 
+  //Descrição: Seleciona as moedas para analisar
+  //Autor: Matheus 
+  //Entrada: os dados da moeda
+  //Saída: Adiciona para analise das moedas criptografadas
   onAddListWacthing(obj:any){
     if(obj.input <= 0){
       
