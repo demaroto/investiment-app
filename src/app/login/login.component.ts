@@ -18,10 +18,12 @@ export class LoginComponent implements OnInit {
 
    }
 
+ //Descrição: Verifica se usuário existe e os dados estiver corretos.
+ //Autor: Matheus
+ //Entrada: Recebe as informações do email e da senha
+ //Saida: Retorna a validade se o usuario é existente ou dados estão corretos
    validaAcesso(email, senha){
-     /*
-     Verifica se usuário existe e os dados estiver corretos.
-     */
+
     if(this.loginService.existeUsuario(email,senha)){
       this.router.navigate(['/app']);
       console.log(this.loginService.getId());
