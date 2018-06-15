@@ -160,7 +160,11 @@ export class AplicacaoComponent implements OnInit {
 
     }
   }
-  
+ 
+  //Descrição: Avisa quando pode comprar ou vender colocando uma cor verde de fundo
+  //Autor: Matheus 
+  //Entrada: Objeto da moeda que se encontra na lista
+  //Saída: Atualizar os valores das moedas
   onSendMsg(cripto){
       
     if(cripto.type == 'Compra'){
