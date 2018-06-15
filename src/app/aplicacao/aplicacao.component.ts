@@ -149,7 +149,11 @@ export class AplicacaoComponent implements OnInit {
     }
    
   }
-  
+ 
+  //Descrição: Recebe as atualizações de valores em tempo real
+  //Autor: Matheus 
+  //Entrada: Não tem
+  //Saída: Atualizar os valores das moedas
   onAtualizaPreco(){
     for(let i in this.listWatching){
       this.listWatching[i].now = this.onAcompanhaPreco(this.listWatching[i].pair, this.listWatching[i].type);
