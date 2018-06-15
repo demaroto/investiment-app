@@ -10,7 +10,10 @@ const POLONIEX_URL = 'https://poloniex.com/public?command=returnTicker';
 
 export class PoloniexService {
 
-  //Inicia o construtor e inicializa a variável http e tipa como HttpClient
+  //Descrição: Inicia o construtor e inicializa a variável http e define como HttpClient
+  //Autor: Lucas Santos
+  //Entrada: inicializa a variavel http tipando ela como um modulo HttpCliente que é um modulo de requisição ajax
+  //Saida: Nenhum dado
   constructor(private http: HttpClient) {
      
   }
