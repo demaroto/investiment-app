@@ -6,7 +6,12 @@ import { AplicacaoComponent } from './aplicacao/aplicacao.component';
 import { HomeComponent } from './home/home.component';
 
 
-
+/****
+* DESCRIÇÃO:Define as rotas
+* AUTOR:Wildemar
+* ENTRADA:Cria um array de objetos com as definições das rotas da aplicação
+* SAIDA:Nenhuma
+***/
 const APP_ROUTES: Routes = [
     { path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent },
