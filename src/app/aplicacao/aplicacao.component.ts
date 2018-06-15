@@ -124,6 +124,10 @@ export class AplicacaoComponent implements OnInit {
    this.inputB = 0; 
   }
   
+  //Descrição: Exclui as moedas criptografadas selecionadas da analise 
+  //Autor: Matheus 
+  //Entrada: A chave da lista que pertence as moedas
+  //Saída: Excluir as moedas que foram selecionadas
   onRemove(index){
     if(confirm(`Deseja realmente excluir ${this.listWatching[index].pair} | ${this.listWatching[index].type}: ${this.listWatching[index].wish.toFixed(8)} ?`)){
        this.listWatching.splice(index, 1);
