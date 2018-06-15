@@ -8,8 +8,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  
   cadastrados:string[] = [];
   classe:string = "hide";
+  
+  /****
+* DESCRIÇÃO: Atribui a variável cadastrados o valor recuperado do serviço getCadastrados 
+* AUTOR:Wildemar
+* ENTRADA:um parametro de serviço do login e outro de modulo de rota
+* SAIDA: Nenhuma saida
+***/
+  
   constructor(private loginService:LoginService, private router: Router) {
     
     
