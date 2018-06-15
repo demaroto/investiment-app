@@ -134,6 +134,11 @@ export class AplicacaoComponent implements OnInit {
     }
    
   }
+  
+  //Descrição: Recebe dois parametros,a moeda e o tipo da função, se for compra retorna um valor e se for venda, outro.
+  //Autor: Matheus 
+  //Entrada: O nome da moeda e o tipo da transação (compra ou venda)
+  //Saída: Exibir valores
   onAcompanhaPreco(moeda:string,tipo:any){
     let low = JSON.parse(this.getAllPair.all)[moeda]['lowestAsk'];
     let hig = JSON.parse(this.getAllPair.all)[moeda]['highestBid'];
