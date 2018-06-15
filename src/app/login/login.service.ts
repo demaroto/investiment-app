@@ -17,7 +17,13 @@ export class LoginService {
   getCadastrados(){
    return this.cadastroService.cadastrados;
   }
-
+  
+  /*
+  Descrição: Verificar se o usuario existe, validando o email e senha
+  Autor: Lucas Santos
+  Entrada: Os dados de email e senha passados como parametro
+  Saida: Se o email e senha for igual aos dados cadastrados, returna verdadeiro 
+  */
   existeUsuario(email,senha){
     for (const dados of this.cadastroService.cadastrados) {
        if(email == dados.email && senha == dados.senha){
