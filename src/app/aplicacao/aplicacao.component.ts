@@ -17,7 +17,11 @@ export class AplicacaoComponent implements OnInit {
   listWatching:any = [];
   inputB:number = 0;
   logged:string = '';
- 
+  
+  //Descrição: Inicializa as variáveis e tipa as variaveis dos serviços
+  //Autor: Matheus 
+  //Entrada: Variáveis do API
+  //Saída: Inicializa um temporizador para buscar os valores das moedas.
   constructor(private poloniexService: PoloniexService, private loginService: LoginService) {
       this.logged = this.loginService.getId();
       this.onLogged();
