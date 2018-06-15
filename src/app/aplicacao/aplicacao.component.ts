@@ -47,11 +47,15 @@ export class AplicacaoComponent implements OnInit {
     }
   }
   
+ //Descrição: Recupera o valor de uma moeda
+ //Autor: Matheus
+ //Entrada: Nome da moeda  
+ //Saida: Pega o nome da moeda e mostra o valor da mesma
   onGet(pair:string){
     this.pairSelected = pair;
     this.poloniexService.getResultado()
     .subscribe(
-      //Atribui os dados da requisição para as variáveis
+      
       data => this.getData = {
         all: data,
         pairWork: pair,
