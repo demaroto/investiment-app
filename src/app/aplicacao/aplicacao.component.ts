@@ -58,7 +58,10 @@ export class AplicacaoComponent implements OnInit {
     
   }
   
-  //Recupera os valores de todas as criptomoedas
+  //Descrição: Recupera os valores de todas as criptomoedas
+  //Autor: Matheus
+  //Entrada: Não tem
+  //Saída: Dados dos valores de todas as criptomoedas
   onGetAll(){
     this.poloniexService.getResultado()
     .subscribe(
