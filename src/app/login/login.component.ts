@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from './login.service';
 import { Router } from '@angular/router';
 
+/****
+* DESCRIÇÃO:Definição do decorator do componente login
+* AUTOR: Wildemar Barbosa
+* ENTRADA:Seletor HTML, Template HTML e Folha de estilo CSS
+* SAIDA: Nenhuma
+***/
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
