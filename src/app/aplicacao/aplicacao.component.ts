@@ -35,6 +35,10 @@ export class AplicacaoComponent implements OnInit {
 
   }
   
+  //Descrição: Uma função que verifica se o usuário se encontra logado ou não.
+  //Autor: Matheus 
+  //Entrada: Não tem
+  //Saída: Se o usuario esta logado ou deslogado
   onLogged(){
     if(this.logged != ''){
       console.log('Logado');
