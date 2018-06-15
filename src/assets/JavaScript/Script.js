@@ -18,6 +18,11 @@ $(window).scroll(function(){
 	var home = $(".home").innerHeight() - 50;
 	var analise = $(".analise").innerHeight() + home;
 	
+	//Descrição: A função tem como objetivo mudar as propriedades das cores da tag 'a' e mudar a logo caso a rolagem 
+	// da tela seja maior que o tamanho da seção de 'analise'.
+	// Autor: Lucas Santos
+	// Entrada: Nenhum dado
+	// Saida: Propriedades CSS da tag 'a' mudadas, e logo alterada
 	if($(this).scrollTop() > analise){
 		$("nav a").css({"color":"#000"});
 		$(".logo").fadeOut(300);
@@ -33,7 +38,14 @@ $(window).scroll(function(){
 });
 
 /* ---------- Menu ---------- */	
-
+	
+	//Descrição: A função tem como intuito remover a classe 'active' da tag 'a' que esta dentro da tag 'nav'
+	//Atribuir o valor 'href' da mesma para a execução da função de animação para que a pagina seja rolada automaticamente para a
+	//localização da id referente ao valor href no tempo de 1 segundo.
+	//Autor: Lucas Santos
+	//Entrada: Valor do atributo 'href'
+	//Saida: Execução da animação de rolagem automatica da página
+	
 	$("nav a").click(function(e){
 		
 		$("nav a").removeClass("active");
@@ -41,12 +53,12 @@ $(window).scroll(function(){
 		$(this).addClass("active");	
 		
 		event.preventDefault();
-		
-		var element = $(this).attr("href");
-		
+	
 		$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
 		
 	});
+	
+	
 	
 	$(".inic").click(function(){
 		window.location.href = "";
