@@ -4,6 +4,12 @@ import { CadastroService } from '../cadastro/cadastro.service';
 @Injectable()
 export class LoginService {
 
+  /*
+  DESCRIÇÃO: Inicializa o serviço de cadastro dos usuários
+  AUTOR: Wildemar
+  ENTRADA: Instancia do arquivo de serviço
+  SAIDA: Atribuição da variável ao serviço  
+  */
   constructor(private cadastroService: CadastroService) { }
 
     logado:string="";
