@@ -1,9 +1,18 @@
 // JavaScript Document
 
+//Descrição: Função de carregamento da página, ao carregar a página tudo o que estiver dentro desta função sera carregado
+//Autor: Lucas Santos
+//Entrada: Nenhum dado
+//Saida: Execução das demais funções dentro da mesma
 $(document).ready(function(e){
 
 /* ---------- Window Scroll --------- */
 
+	
+//Descrição: Função de rolagem da página, ao rolar a pagina as seguintes função serão executadas
+//Autor: Lucas Santos
+//Entrada: Nenhum dado
+//Saida: Execução das demais funções dentro da mesma
 $(window).scroll(function(){
 
 	var home = $(".home").innerHeight() - 50;
