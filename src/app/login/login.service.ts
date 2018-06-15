@@ -34,6 +34,12 @@ export class LoginService {
     return false;
   }
   
+  /*
+  Descrição: Esta função returna o usuario logado
+  Autor: Lucas Santos
+  Entrada: Nenhum dado
+  Saida: Retorna usuario logado
+  */
   getId(){
       return this.logado;
   }
