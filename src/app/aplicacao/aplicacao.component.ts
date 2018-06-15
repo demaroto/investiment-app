@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { PoloniexService } from './poloniex.service';
 import { LoginService } from '../login/login.service';
 
-
+//Descrição: Definição do componente da aplicação
+//Autor: Matheus 
+//Entrada: Seletor HTML, Template HTML e Folha de estilo CSS
+//Saída:
 @Component({
   selector: 'app-aplicacao',
   templateUrl: './aplicacao.component.html',
