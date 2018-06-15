@@ -71,7 +71,10 @@ export class AplicacaoComponent implements OnInit {
     
   }
   
-  //Lista os nomes das criptomoedas
+  //Descrição: Lista os nomes das criptomoedas
+  //Autor: Matheus 
+  //Entrada: Não tem
+  //Saída: Adiciona a lista das criptomoedas
   onListPair(){
     
     let all = JSON.parse(this.getAllPair.all);
