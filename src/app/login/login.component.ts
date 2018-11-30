@@ -41,7 +41,6 @@ export class LoginComponent implements OnInit {
 
     if(this.loginService.existeUsuario(email,senha)){
       this.router.navigate(['/app']);
-      console.log(this.loginService.getId());
     }else{
       this.classe = "show collection";
     }

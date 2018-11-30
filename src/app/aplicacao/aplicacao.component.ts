@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PoloniexService } from './poloniex.service';
 import { LoginService } from '../login/login.service';
-
+import { Router } from '@angular/router';
 //Descrição: Definição do componente da aplicação
 //Autor: Matheus 
 //Entrada: Seletor HTML, Template HTML e Folha de estilo CSS
@@ -25,7 +25,7 @@ export class AplicacaoComponent implements OnInit {
   //Autor: Matheus 
   //Entrada: Variáveis do API
   //Saída: Inicializa um temporizador para buscar os valores das moedas.
-  constructor(private poloniexService: PoloniexService, private loginService: LoginService) {
+  constructor(private poloniexService: PoloniexService, private loginService: LoginService, private router: Router) {
       this.logged = this.loginService.getId();
       this.onLogged();
      this.onGet(this.pairSelected);
@@ -46,7 +46,7 @@ export class AplicacaoComponent implements OnInit {
     if(this.logged != ''){
       console.log('Logado');
     }else{
-      console.log('Deslogado');
+      this.router.navigate(['/login']);
     }
   }
   
